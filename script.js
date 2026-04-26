@@ -28,3 +28,7 @@ function addSession() {
         input.value = "";
     }
 }
+function importBlackboard() {
+    let message = document.getElementById("blackboardMessage");
+    message.style.display = "block";
+}
