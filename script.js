@@ -28,7 +28,8 @@ function addSession() {
         input.value = "";
     }
 }
+
 function importBlackboard() {
-    let message = document.getElementById("blackboardMessage");
+    let message = document.getElementById("message");
     message.style.display = "block";
 }
