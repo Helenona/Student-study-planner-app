@@ -1,86 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Study Planner App</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+<!-- BLACKBOARD SYNC -->
+<div id="blackboard" class="screen">
+    <h2>Blackboard Sync</h2>
 
-<body>
-
-<div class="phone">
-
-    <!-- LOGIN -->
-    <div id="login" class="screen active">
-        <h2>Study Planner</h2>
-        <input type="text" placeholder="Email">
-        <input type="password" placeholder="Password">
-        <button onclick="goTo('home')">Login</button>
+    <div class="card">
+        <p>Import assignment deadlines directly from Blackboard.</p>
     </div>
 
-    <!-- HOME -->
-    <div id="home" class="screen">
-        <h2>Hi Helen 👋</h2>
-        <p>Upcoming Deadlines:</p>
-        <ul>
-            <li>Assignment 1 - Apr 20</li>
-            <li>Assignment 2 - Apr 25</li>
-        </ul>
+    <button onclick="importBlackboard()">Import Deadlines</button>
 
-        <button onclick="goTo('assignments')">Assignments</button>
-        <button onclick="goTo('planner')">Study Planner</button>
-        <button onclick="goTo('notifications')">Notifications</button>
-        <button onclick="goTo('profile')">Profile</button>
+    <div id="blackboardMessage" class="success-message">
+        Deadlines imported successfully!
     </div>
 
-    <!-- ASSIGNMENTS -->
-    <div id="assignments" class="screen">
-        <h2>Assignments</h2>
-        <ul id="assignmentList">
-            <li>Coursework 1</li>
-            <li>Coursework 2</li>
-        </ul>
-
-        <input id="newAssignment" placeholder="New assignment">
-        <button onclick="addAssignment()">Add</button>
-
-        <button onclick="goTo('home')">Back</button>
-    </div>
-
-    <!-- STUDY PLANNER -->
-    <div id="planner" class="screen">
-        <h2>Study Planner</h2>
-
-        <ul id="sessionList">
-            <li>Revision Session</li>
-        </ul>
-
-        <input id="newSession" placeholder="New session">
-        <button onclick="addSession()">Add</button>
-
-        <button onclick="goTo('home')">Back</button>
-    </div>
-
-    <!-- NOTIFICATIONS -->
-    <div id="notifications" class="screen">
-        <h2>Notifications</h2>
-        <p>Assignment due tomorrow</p>
-        <p>Study session at 5PM</p>
-
-        <button onclick="goTo('home')">Back</button>
-    </div>
-
-    <!-- PROFILE -->
-    <div id="profile" class="screen">
-        <h2>Profile</h2>
-        <p>Name: Helen</p>
-        <p>University: Salford</p>
-
-        <button onclick="goTo('home')">Back</button>
-    </div>
-
+    <button onclick="goTo('home')">Back</button>
 </div>
-
-<script src="script.js"></script>
-
-</body>
-</html>
